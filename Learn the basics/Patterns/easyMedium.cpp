@@ -1,7 +1,17 @@
 #include <iostream>
 using namespace std;
 
+int reverseNum(int num) {
+    if (num == 1) {
+        return 0;
+    }
+    return 1;
+}
+
 int main() {
+    int n ;
+    cin >> n;
+
     // 1
     // for (int i = 0; i < 5; i++) {
     //     cout << "*****" << "\n";
@@ -102,10 +112,94 @@ int main() {
     // }
 
     // 10
-    for (int i = 0; i < 9; i++) {
+    // int n;
+    // cin >> n;
+    // for (int i = 0; i < n; i++) {
+    //     int num = (n+1)/2;
+    //     for (int j = 0; j < (num - abs(num - (i+1))); j++ ) {
+    //         cout << "*";
+    //     }
+    //     cout << "\n";
+    // }
 
-        for (int )
-    }
+    //11
+    // int numColumn = 1;
+    // for (int i = 0; i < 5; i++) {
+
+    //     int numRow = numColumn;
+        
+    //     for (int j = 0; j <= i; j++) {
+    //         // print
+    //         cout << numRow;
+    //         numRow = reverseNum(numRow);
+    //     }
+
+    //     numColumn = reverseNum(numColumn);
+
+    //     cout << "\n";
+    // }
+
+    // 12
+
+    // for (int i = 0; i < n; i++) {
+
+    //     for (int j = 0; j <= i; j++) {
+    //         cout << j + 1; 
+    //     }
+    //     for (int k = 0; k < 2 * (n - (i+1)); k++) {
+    //         cout << " ";
+    //     }
+    //     for (int l = 0; l <= i; l++) {
+    //         cout << (i + 1) - l;
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 13
+
+    // int num = 1;
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j <= i; j++) {
+    //         cout << num;
+    //         num++;
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 14
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j <= i; j++) {
+    //         char alpha = 65 + j;
+    //         cout << alpha;
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 15
+    
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j <= ((n-1) - i); j++ ) {
+    //         char alpha = 65 + j;
+    //         cout << alpha;
+    //     }
+
+    //     cout << "\n";
+    // }
+
+    // 16
+    // char alpha = 65;
+    // for (int i = 0; i < n; i++) {
+    //     alpha = 65 + i;
+    //     for (int j = 0; j <= i; j++) {
+    //         cout << alpha;
+    //     }
+    //    cout << "\n";
+    // }
+
+    // 17
+
+    
+
 
     return 0;
 
