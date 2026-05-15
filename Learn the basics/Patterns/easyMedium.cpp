@@ -197,8 +197,142 @@ int main() {
     // }
 
     // 17
+    // for (int i = 0; i < n; i++) {
 
-    
+    //     for (int k = 0; k < (n-i); k++) {
+    //         cout << " ";
+    //     }
+
+    //     for (int j = 0; j < (2*i + 1); j++) {
+    //         char x;
+    //         if (j > i) { x = (65 + i)- (j-i); }
+    //         else { x = 65 + j; }
+
+    //         cout << x;
+    //     }
+    //     cout << "\n";
+        
+    // }       
+
+    // 18
+
+    // for (int i = 0; i < n; i++) {
+
+    //     for (int j = 0; j <= i; j++) {
+    //         char x = 65 + (n-1) - i + j;
+    //         cout << x << " ";
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 19
+
+    // for (int i = 0; i < n; i++) {
+
+    //     int stars = n - i;
+    //     int spaces = 2 * i;
+
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+    //     for (int k = 0; k < spaces; k++) {
+    //         cout << " ";
+    //     }
+
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+    //     cout << "\n";
+    // }
+
+    // for (int i = 0; i < n; i++) {
+
+    //     int stars = i;
+    //     int spaces = 2*(n- i - 1);
+
+    //     for (int j = 0; j <= stars; j++) {
+    //         cout << "*";
+    //     }
+    //     for (int k = 0; k < spaces ; k++) {
+    //         cout << " ";
+    //     }
+
+    //     for (int j = 0; j <= stars; j++) {
+    //         cout << "*";
+    //     }
+    //  cout << "\n";
+    // }   
+
+    // 20
+
+    // for (int i = 0; i < (2*n); i++) {
+    //     int stars;
+    //     int spaces;
+    //     if (i >= n) {
+    //         stars = 2*n - i;
+    //     }
+    //     else {
+    //         stars = i;
+    //     }
+    //     spaces = (2*n) - 2* stars;
+
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+    //     for (int k = 0; k < spaces; k++) {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 21
+
+    // for (int i = 0; i < n; i++) {
+    //     int stars;
+    //     int spaces;
+
+    //     if (i == 0 || i == (n-1)) {
+    //         for (int j = 0; j < n; j++) {
+    //             cout << "*";
+    //         }
+    //         cout << "\n";
+    //         continue;
+    //     }
+    //     stars = 1;
+    //     spaces = n - 2* stars;
+
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+
+    //     for (int k = 0; k < spaces; k++) {
+    //         cout << " ";
+    //     }
+
+    //     for (int j = 0; j < stars; j++) {
+    //         cout << "*";
+    //     }
+    //     cout << "\n";
+
+    // }
+
+    // 22
+    for (int i = 0; i < (2* n) -1; i++) {
+        for (int j = 0; j < n; j++) {
+            int num;
+            if (i)
+            cout << "*";
+        }
+        cout << "\n";
+    }
+  
+
+
+
+
 
 
     return 0;
