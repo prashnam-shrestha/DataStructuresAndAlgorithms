@@ -320,11 +320,28 @@ int main() {
     // }
 
     // 22
-    for (int i = 0; i < (2* n) -1; i++) {
-        for (int j = 0; j < n; j++) {
-            int num;
-            if (i)
-            cout << "*";
+    // for (int i = 0; i < (2* n) -1; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //         int num;
+    //         if (i)
+    //         cout << "*";
+    //     }
+    //     cout << "\n";
+    // }
+
+    // 23
+    int rows = (n * 2) - 1;
+    int columns = rows;
+
+    for (int i = 0; i < rows; i++) {
+
+        for (int j = 0; j < rows; j++) {
+            int top = i;
+            int left = j;
+            int right  = (2*n - 2) - j;
+            int down = (2*n - 2) - i;
+            cout << (n - min(min(top,down), min(left, right)));
+
         }
         cout << "\n";
     }
