@@ -39,13 +39,16 @@ int main() {
     }
 
     // LOOP IN VECTORS
-    for (auto it = v5.begin(); it != v5.end(); it++) {
-        cout << *(it) << " ";
-    }
+    // for (auto it = v5.begin(); it != v5.end(); it++) {
+    //     cout << *(it) << " ";
+    // }
+    v5.erase(v5.begin(), v5.end());
 
     for (auto it: v5) {
         cout << it << " ";
     }
+    
+
     
 
     
