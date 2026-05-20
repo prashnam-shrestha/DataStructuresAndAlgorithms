@@ -1,5 +1,7 @@
 #include <iostream>
 #include <list>
+#include <map>
+#include <set>
 using namespace std;
 
 int main() {
@@ -30,6 +32,44 @@ int main() {
     pQueue1.push(10);
     pQueue1.push(20);
     cout << pQueue1.top();
+
+    // SET
+
+    set<int> st;
+    st.insert(1);
+    st.insert(9);
+    st.insert(0);
+    st.insert(2);
+
+    cout << "\n-- SETS--" << endl;
+    for (auto i: st) {
+        cout << i;
+    }
+
+    auto i = st.find(0); // RETURNS ADDRESS
+    cout << *i;
+
+    st.erase(3);
+
+    cout << st.count(0);
+
+    // MULTI SET (SORTED)
+    // UNORDERED SET (UNIQUE)- O(1)
+
+    // MAPS
+    cout << "\n";
+    map<int, int> mpp;
+    mpp[1] = 2;
+    mpp.emplace(3, 1);
+    mpp.emplace(2, 3);
+
+    for (auto i: mpp) {
+        cout << i.second;
+    }
+
+    // MULTI MAP
+    // UNORDERED MAP 
+
 
 
 
