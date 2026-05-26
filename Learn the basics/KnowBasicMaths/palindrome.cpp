@@ -5,7 +5,7 @@ bool palindromeNum(int n) {
     int nonReversed = n;
     int reversed = 0;
 
-    while (n > 0) {
+    while (n != 0) {
         reversed = reversed * 10 + n % 10;
         n = n/10;
     }
@@ -15,7 +15,7 @@ bool palindromeNum(int n) {
 
 int main() {
 
-    int a = 101;
+    int a = 10;
     cout << palindromeNum(a);
     return 0;
 }
