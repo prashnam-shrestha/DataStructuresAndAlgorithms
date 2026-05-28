@@ -11,21 +11,22 @@ vector<int> reverseArr(vector<int> nums) {
     return reversed;
 }
 
-vector<int> reverseArrR(vector<int> nums) {
+void reverseArrR(vector<int>& nums, int left, int right) {
     
     // Base case
-    vector<int> ans;
-    ans.push_back()
-    return ans;
-
-
+    if (left > right) {
+        return;
+    }
+    swap(nums.at(left), nums.at(right));
+    reverseArrR(nums, left + 1, right - 1);
 }
 
 int main() {
 
-    vector<int> v = {1,2,3,4};
-    vector<int> v1 = reverseArr(v);
-    for (auto i: v1) {
+    vector<int> v = {1,2,3,4,5,6,7,8};
+    reverseArrR(v, 0, 7);
+    reverse(v.begin(), v.end());
+    for (auto i: v) {
         cout << i << endl;
     }
     return 0;
