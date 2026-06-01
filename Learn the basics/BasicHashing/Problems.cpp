@@ -7,9 +7,11 @@ int main() {
     int arr[] = {10, 10, 5, 5};
     unordered_map<int, int> frequency;
 
+    // Pre compute
     for (auto i: arr) {
         frequency[i]++;
     }
+    // Finding the highest and lowest
     auto random = frequency.begin();
     pair<int, int> highest = {random->first, random->second};
     pair<int, int> lowest = {random->first,random->second};
