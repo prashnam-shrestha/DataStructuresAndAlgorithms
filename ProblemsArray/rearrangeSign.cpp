@@ -1,6 +1,23 @@
 #include <iostream>
 #include <queue>
 using namespace std;
+void rearrangeSign2(vector<int> &nums) {
+    int size = nums.size();
+    int even = 0;
+    int odd = 1;
+    vector<int> result(size);
+    for (int i = 0; i < size; i++) {
+        if (nums[i] >= 0) {
+            result[even] = nums[i];
+            even += 2;
+        }
+        else {
+            result[odd] = nums[i];
+            odd += 2;
+        }
+    }
+    nums = result;
+}
 
 void rearrangeSign(vector<int> &nums) {
     queue<int> negativeStock;
@@ -31,7 +48,7 @@ void rearrangeSign(vector<int> &nums) {
 
 int main() {
     vector<int> nums = {1,2,3,-1,-2,-3};
-    rearrangeSign(nums);
+    rearrangeSign2(nums);
     for (auto i: nums) {
         cout << i << " ";
     }
