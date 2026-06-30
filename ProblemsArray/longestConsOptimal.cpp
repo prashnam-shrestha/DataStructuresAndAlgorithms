@@ -1,23 +1,26 @@
 #include <iostream>
-#include <unordered_map>
+#include <unordered_set>
 using namespace std;
 
 int longestConsecutive(vector<int> &nums) {
 
     int max = 1;
     int current = 1;
-    unordered_map<int, int> existence;
+    if (nums.size() <= 0) {
+        return 0;
+    }
+    unordered_set<int> existence;
 
     for (auto i: nums) {
-        existence[i] ++;
+        existence.insert(i);
     }
-    for (auto i: nums) {
+    for (auto i: existence) {
 
         int num = i;
-        if (existence.find(num - 1) != existence.end()) {
+        if (existence.count(num - 1)) {
             continue;
         }
-        while (existence.find(num + 1) != existence.end()) {
+        while (existence.count(num + 1)) {
             current ++;
             num++;
         }
@@ -31,7 +34,7 @@ int longestConsecutive(vector<int> &nums) {
 }
 
 int main() {
-    vector<int> nums = {100, 4, 200, 1, 3, 2};
+    vector<int> nums = {};
     cout << longestConsecutive(nums);
 
 }
