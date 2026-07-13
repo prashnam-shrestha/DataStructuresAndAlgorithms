@@ -4,42 +4,29 @@ using namespace std;
 void setMatrixZero(vector<vector<int>> &matrix) {
     int size = matrix.size();
     int columnSize = matrix[0].size();
-    vector<pair<int,int>> index;
-    bool found = false;
+    vector<int> rows(size, 0);
+    vector<int> column(columnSize, 0);
 
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < columnSize; j++) {
             if (matrix[i][j] == 0) {
-                pair<int,int> temp = {i,j};
-                index.push_back(temp);
-                found = true;
+                rows[i] = 1;
+                column[j] = 1;
             }
         }
     }
 
-    if (!found) {
-        return;
-    }
-    for (auto k : index) {
-
-        for (int i = 0; i < size; i++) {
-
-            for (int j = 0; j < columnSize; j++) {
-                if (i == k.first) {
-                    matrix[i][j] = 0;
-                }
-                else if(j == k.second) {
-                    matrix[i][j] = 0;
-                }
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < columnSize; j++) {
+            if (rows[i] == 1 || column[j] == 1) {
+                matrix[i][j] = 0;
             }
         }
     }
-
 }
 
 int main() {
-
-    vector<vector<int>> matrix = {{0,1,0},{1,1,1},{1,1,1}};
+    vector<vector<int>> matrix = {{1,1,1},{1,0,1},{1,1,1}};
     setMatrixZero(matrix);
     int size = matrix.size();
     int columnSize = matrix[0].size();
